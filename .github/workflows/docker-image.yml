@@ -17,4 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build -t ghrc.io/kevingr19-univ/dockertd1 .
+        echo $DOCKER_TOKEN | docker login ghcr.io -u "KevinGr19-Univ" --password-stdin
         docker push ghrc.io/kevingr19-univ/dockertd1

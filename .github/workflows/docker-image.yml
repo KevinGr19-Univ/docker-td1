@@ -15,6 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: |
-        docker build -t kevingr19univ/dockertd1 .
-        docker push ghcr.io/kevingr19-univ/dockertd1
+      run: docker build -t ghrc.io/kevingr19-univ/dockertd1 .
+
+  push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Pushes the Docker image to GHRC
+      run: docker push ghrc.io/kevingr19-univ/dockertd1
